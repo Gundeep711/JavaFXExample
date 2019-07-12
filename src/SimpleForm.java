@@ -27,21 +27,32 @@ public class SimpleForm extends Application {
 		// Button
 		Button goButton = new Button();
 		goButton.setText("Click Here !!");
+		
+		goButton.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override
+		    public void handle(ActionEvent e) {
+		        // Logic for what should happen when you push button
+		    	System.out.println("Output of actionEvent");
+
+		    }
+		});
+		
 
 		// * 2.Make a layout manager
-		VBox root = new VBox();
+		VBox root = new VBox(); // Decide the layout of GUI -STACKPANE, HBox, VBox, Grid etc
 		
 		// * 3.Add controls to the layout manager
 		// in same order as above
 		root.getChildren().add(helloLabel);
+		
 		root.getChildren().add(name);
 		root.getChildren().add(goButton);
 		
 		// * 4.Add layout manager to scene
 		// * 5.Add scene to a stage
 		
-		// set height and width to 300 & 250
-		primaryStage.setScene(new Scene(root,300,250));
+		// set width and height to 300 & 250
+		primaryStage.setScene(new Scene(root,300,250)); // Scene controls the height and width of the app
 		
 		//Setting the title bar
 		primaryStage.setTitle("Example 01");
