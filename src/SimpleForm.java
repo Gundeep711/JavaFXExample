@@ -30,6 +30,10 @@ public class SimpleForm extends Application {
 		// * 2.Make a layout manager
 		VBox root = new VBox();
 		// * 3.Add controls to the layout manager
+		// in same order as above
+		root.getChildren().add(helloLabel);
+		root.getChildren().add(name);
+		root.getChildren().add(goButton);
 		// * 4.Add layout manager to scene
 		// * 5.Add scene to a stage
 		// * 6.Show the app
